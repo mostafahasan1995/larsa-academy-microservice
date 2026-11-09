@@ -1,0 +1,5 @@
+1- Refactor the code
+2- Get Client info from manager
+3- Set the client automationData.recivedBefore to true upon sending
+
+4 - add db index functionality to the base repo

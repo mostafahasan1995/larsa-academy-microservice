@@ -1,0 +1,105 @@
+version: '3.8'
+
+services:
+  # Main application
+  larsa-academy:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        GITLAB_ACCESS_TOKEN: ${GITLAB_ACCESS_TOKEN}
+    ports:
+      - "3278:3278"
+    environment:
+      - PORT=3278
+      - MONGODB_URI=mongodb://mongodb:27017/larsa_academy
+      - REDIS_URL=redis://redis:6379
+      - NATS_URL=nats://nats:4222
+      - IS_LOCAL=true
+    depends_on:
+      - mongodb
+      - redis
+      - nats
+    networks:
+      - larsa-network
+    restart: unless-stopped
+
+  # MongoDB database
+  mongodb:
+    image: mongo:7.0
+    ports:
+      - "27017:27017"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=password
+      - MONGO_INITDB_DATABASE=larsa_academy
+    volumes:
+      - mongodb_data:/data/db
+      - ./scripts/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+    networks:
+      - larsa-network
+    restart: unless-stopped
+
+  # Redis cache
+  redis:
+    image: redis:7.2-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - larsa-network
+    restart: unless-stopped
+
+  # NATS Streaming Server
+  nats:
+    image: nats-streaming:0.25.6
+    ports:
+      - "4222:4222"
+      - "8222:8222"  # Monitoring port
+    command: ["-p", "4222", "-m", "8222", "-hbi", "5s", "-hbt", "5s", "-hbf", "2", "-SD", "-cid", "larsa-cluster"]
+    networks:
+      - larsa-network
+    restart: unless-stopped
+
+  # MongoDB Express (optional - for database management)
+  mongo-express:
+    image: mongo-express:1.0.2
+    ports:
+      - "8081:8081"
+    environment:
+      - ME_CONFIG_MONGODB_ADMINUSERNAME=admin
+      - ME_CONFIG_MONGODB_ADMINPASSWORD=password
+      - ME_CONFIG_MONGODB_URL=mongodb://admin:${MONGO_PASSWORD}@mongodb:27017/
+      - ME_CONFIG_BASICAUTH_USERNAME=admin
+      - ME_CONFIG_BASICAUTH_PASSWORD=admin
+    depends_on:
+      - mongodb
+    networks:
+      - larsa-network
+    restart: unless-stopped
+    profiles:
+      - tools
+
+  # Redis Commander (optional - for Redis management)
+  redis-commander:
+    image: rediscommander/redis-commander:latest
+    ports:
+      - "8082:8081"
+    environment:
+      - REDIS_HOSTS=local:redis:6379
+    depends_on:
+      - redis
+    networks:
+      - larsa-network
+    restart: unless-stopped
+    profiles:
+      - tools
+
+volumes:
+  mongodb_data:
+  redis_data:
+
+networks:
+  larsa-network:
+    driver: bridge

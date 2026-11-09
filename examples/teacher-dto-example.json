@@ -1,0 +1,117 @@
+{
+  "employmentStatus": "full-time",
+  "firstName": "Ahmed",
+  "lastName": "Al-Rashid",
+  "gender": "male",
+  "dateOfBirth": "1985-06-15T00:00:00Z",
+  "nationality": "Saudi Arabian",
+  "nationalID": "1234567890",
+  "hireDate": "2023-09-01T00:00:00Z",
+  "joiningDate": "2023-09-15T00:00:00Z",
+  "picture": {
+    "_id": "64f1a2b3c4d5e6f7a8b9c0d1",
+    "originalName": "ahmed_profile.jpg",
+    "path": "/uploads/teachers/profiles/ahmed_profile.jpg",
+    "service": "file-storage",
+    "expire": "2024-12-31T23:59:59Z",
+    "variants": ["thumbnail", "medium", "large"]
+  },
+  "idDocument": {
+    "_id": "64f1a2b3c4d5e6f7a8b9c0d2",
+    "originalName": "ahmed_national_id.pdf",
+    "path": "/uploads/teachers/documents/ahmed_national_id.pdf",
+    "service": "file-storage",
+    "expire": "2025-12-31T23:59:59Z",
+    "variants": []
+  },
+  "mobile": "+000000000000",
+  "email": "ahmed.alrashid@larsa.academy",
+  "qualification": {
+    "academicSpecialization": "Mathematics Education",
+    "yearOfExperience": 8,
+    "highestDegree": "Master's Degree",
+    "university": "King Saud University",
+    "cv": {
+      "_id": "64f1a2b3c4d5e6f7a8b9c0d3",
+      "originalName": "ahmed_cv_2023.pdf",
+      "path": "/uploads/teachers/cv/ahmed_cv_2023.pdf",
+      "service": "file-storage",
+      "expire": "2025-12-31T23:59:59Z",
+      "variants": []
+    },
+    "certificates": [
+      {
+        "_id": "64f1a2b3c4d5e6f7a8b9c0d4",
+        "originalName": "masters_certificate.pdf",
+        "path": "/uploads/teachers/certificates/masters_certificate.pdf",
+        "service": "file-storage",
+        "expire": "2030-12-31T23:59:59Z",
+        "variants": []
+      },
+      {
+        "_id": "64f1a2b3c4d5e6f7a8b9c0d5",
+        "originalName": "teaching_license.pdf",
+        "path": "/uploads/teachers/certificates/teaching_license.pdf",
+        "service": "file-storage",
+        "expire": "2030-12-31T23:59:59Z",
+        "variants": []
+      },
+      {
+        "_id": "64f1a2b3c4d5e6f7a8b9c0d6",
+        "originalName": "professional_development_cert.pdf",
+        "path": "/uploads/teachers/certificates/professional_development_cert.pdf",
+        "service": "file-storage",
+        "expire": "2030-12-31T23:59:59Z",
+        "variants": []
+      }
+    ],
+    "contracts": [
+      {
+        "_id": "64f1a2b3c4d5e6f7a8b9c0d7",
+        "originalName": "employment_contract_2023.pdf",
+        "path": "/uploads/teachers/contracts/employment_contract_2023.pdf",
+        "service": "file-storage",
+        "expire": "2030-12-31T23:59:59Z",
+        "variants": []
+      }
+    ],
+    "skills": "Advanced Mathematics, Algebra, Geometry, Calculus, Statistics, Educational Technology, Classroom Management, Student Assessment, Curriculum Development"
+  },
+  "subjects": [
+    {
+      "subjectID": "MATH001",
+      "subjectName": "Advanced Mathematics",
+      "stage": "high-school",
+      "class": ["Grade 10", "Grade 11", "Grade 12"],
+      "note": "Specializes in preparing students for university entrance exams"
+    },
+    {
+      "subjectID": "MATH002",
+      "subjectName": "Algebra",
+      "stage": "middle-school",
+      "class": ["Grade 7", "Grade 8", "Grade 9"],
+      "note": "Focus on foundational algebraic concepts"
+    },
+    {
+      "subjectID": "MATH003",
+      "subjectName": "Calculus",
+      "stage": "high-school",
+      "class": ["Grade 12"],
+      "note": "Advanced placement calculus preparation"
+    }
+  ],
+  "address": {
+    "country": "Saudi Arabia",
+    "city": "Riyadh",
+    "area": "Al-Olaya District",
+    "additionalInfo": "Building 123, Unit 45, near King Fahd Library"
+  },
+  "accountSettings": {
+    "isActive": true,
+    "email": "ahmed.alrashid@larsa.academy",
+    "initialPass": "TempPass123!",
+    "confirmPass": "TempPass123!",
+    "resetOnFirstLogin": true,
+    "joinStatus": "pending"
+  }
+}

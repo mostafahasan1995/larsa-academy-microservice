@@ -1,0 +1,213 @@
+{
+  "basicInfo": {
+    "name": {
+      "en": "Advanced Mathematics Course",
+      "ar": "دورة الرياضيات المتقدمة"
+    },
+    "description": {
+      "en": "Comprehensive mathematics course covering algebra, calculus, and statistics",
+      "ar": "دورة شاملة في الرياضيات تغطي الجبر والتفاضل والإحصاء"
+    },
+    "thumbnail": {
+      "_id": "507f1f77bcf86cd799439020",
+      "originalName": "math-course-thumbnail.jpg",
+      "path": "https://example.com/images/math-course.jpg",
+      "service": "cdn",
+      "expire": "",
+      "variants": []
+    },
+    "linkedSubjects": [
+      "507f1f77bcf86cd799439011",
+      "507f1f77bcf86cd799439012"
+    ],
+    "country": "UAE",
+    "schoolType": "High School",
+    "gradeLevel": "Grade 12",
+    "level": "Advanced",
+    "teachers": [
+      "507f1f77bcf86cd799439013",
+      "507f1f77bcf86cd799439014"
+    ],
+    "tags": ["mathematics", "calculus", "algebra", "statistics"],
+    "status": "active",
+    "maxStudents": 30,
+    "duration": 90
+  },
+  "content": [
+    {
+      "_id": "507f1f77bcf86cd799439015",
+      "title": {
+        "en": "Introduction to Calculus",
+        "ar": "مقدمة في التفاضل والتكامل"
+      },
+      "lessons": [
+        {
+          "_id": "507f1f77bcf86cd799439016",
+          "name": {
+            "en": "Limits and Continuity",
+            "ar": "الحدود والاتصال"
+          },
+          "image": {
+            "_id": "507f1f77bcf86cd799439021",
+            "originalName": "limits-lesson.jpg",
+            "path": "https://example.com/images/limits.jpg",
+            "service": "cdn",
+            "expire": "",
+            "variants": []
+          },
+          "content": [
+            {
+              "title": {
+                "en": "Understanding Limits",
+                "ar": "فهم الحدود"
+              },
+              "type": "video",
+              "data": {
+                "url": "https://example.com/videos/limits-explanation.mp4",
+                "duration": 1200
+              },
+              "meta": {
+                "hasSubtitles": true,
+                "quality": "1080p"
+              }
+            }
+          ],
+          "attachments": [
+            {
+              "_id": "507f1f77bcf86cd799439022",
+              "originalName": "limits-practice.pdf",
+              "path": "https://example.com/files/limits-worksheet.pdf",
+              "service": "cdn",
+              "expire": "",
+              "variants": []
+            }
+          ]
+        }
+      ],
+      "subSections": []
+    }
+  ],
+  "pricing": [
+    {
+      "plan": "one-time payment",
+      "price": 299.99,
+      "currency": "USD",
+      "name": {
+        "en": "Complete Course Access",
+        "ar": "الوصول الكامل للدورة"
+      },
+      "subtitle": {
+        "en": "Lifetime Access",
+        "ar": "وصول مدى الحياة"
+      },
+      "description": {
+        "en": "Get full access to all course materials and future updates",
+        "ar": "احصل على وصول كامل لجميع مواد الدورة والتحديثات المستقبلية"
+      },
+      "config": {
+        "isDefault": true,
+        "instantsCancellation": true,
+        "limitedAccessDuration": false,
+        "limitedDurationType": "",
+        "date": "2025-12-31T23:59:59Z",
+        "num": 0,
+        "unit": ""
+      },
+      "recurringSettings": {
+        "numOfMonthlyPayments": 0
+      },
+      "subscriptionSettings": {
+        "frequency": ""
+      },
+      "installmentsSettings": {
+        "installments": 0,
+        "recurrence": ""
+      }
+    }
+  ],
+  "certificate": {
+    "title": {
+      "en": "Certificate of Completion",
+      "ar": "شهادة إتمام"
+    },
+    "subtitle": {
+      "en": "Advanced Mathematics",
+      "ar": "الرياضيات المتقدمة"
+    },
+    "content": {
+      "en": "This certifies that the student has successfully completed the Advanced Mathematics Course",
+      "ar": "نشهد أن الطالب قد أتم بنجاح دورة الرياضيات المتقدمة"
+    },
+    "background": {
+      "_id": "507f1f77bcf86cd799439023",
+      "originalName": "certificate-background.jpg",
+      "path": "https://example.com/images/certificate-bg.jpg",
+      "service": "cdn",
+      "expire": "",
+      "variants": []
+    },
+    "header": {
+      "showCourseName": true,
+      "courseName": {
+        "en": "Advanced Mathematics Course",
+        "ar": "دورة الرياضيات المتقدمة"
+      },
+      "showStudentName": true,
+      "showLogo": true,
+      "logo": {
+        "_id": "507f1f77bcf86cd799439024",
+        "originalName": "school-logo.png",
+        "path": "https://example.com/images/school-logo.png",
+        "service": "cdn",
+        "expire": "",
+        "variants": []
+      }
+    },
+    "footer": {
+      "includeCompletionData": true,
+      "includeExpirationDate": true,
+      "expireAfterValue": 365,
+      "expireAfterUnit": "days",
+      "includeSerialNumber": true,
+      "addCustomText": true,
+      "customText": {
+        "en": "This certificate is verified by Larsa Academy",
+        "ar": "هذه الشهادة معتمدة من أكاديمية لارسا"
+      }
+    },
+    "automation": {
+      "event": "course_completion"
+    }
+  },
+  "settings": {
+    "liveSession": {
+      "active": true,
+      "title": {
+        "en": "Weekly Live Q&A Session",
+        "ar": "جلسة أسبوعية مباشرة للأسئلة والأجوبة"
+      },
+      "thumbnail": {
+        "_id": "507f1f77bcf86cd799439025",
+        "originalName": "live-session-thumbnail.jpg",
+        "path": "https://example.com/images/live-session.jpg",
+        "service": "cdn",
+        "expire": "",
+        "variants": []
+      },
+      "schedule": "2025-10-01T14:00:00Z",
+      "description": {
+        "en": "Join our weekly live session for interactive learning and Q&A",
+        "ar": "انضم إلى جلستنا الأسبوعية المباشرة للتعلم التفاعلي والأسئلة والأجوبة"
+      },
+      "useExtrnalLink": false,
+      "appName": "Zoom",
+      "url": "https://zoom.us/j/example",
+      "uploadRecordings": true,
+      "publishAfterUpload": true
+    },
+    "commentSettings": {
+      "active": true,
+      "disableNewComments": false
+    }
+  }
+}
